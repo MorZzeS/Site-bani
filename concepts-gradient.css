@@ -1,0 +1,15 @@
+:root{--bg:#0f1214;--text:#f0ebe3;--gold:#c7b377;--gradient-hero:linear-gradient(135deg,#1a2e1f 0%,#0a1812 60%,#2a1f3a 100%);--gradient-card:linear-gradient(160deg,#18241f 0%,#0f151a 100%)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Manrope',system-ui,sans-serif}
+.theme-toggle{position:fixed;top:24px;right:5vw;z-index:100;background:rgba(255,255,255,.08);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:6px 16px;color:var(--text);font-size:11px;letter-spacing:.08em;cursor:pointer;transition:background .2s,border-color .2s}
+.theme-toggle:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.35)}
+.theme-toggle.active{background:rgba(199,179,119,.15);border-color:rgba(199,179,119,.45);color:var(--gold)}
+.hero-gradient{background:var(--gradient-hero);min-height:70vh;display:flex;align-items:center;padding:0 8vw;position:relative;overflow:hidden}
+.hero-gradient::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(199,179,119,.18) 0,transparent 55%)
+}
+.card-gradient{background:var(--gradient-card);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px;transition:transform .25s ease,border-color .25s ease}
+.card-gradient:hover{transform:translateY(-6px);border-color:rgba(199,179,119,.35)}
+.card-gradient h3{font-family:'Prata',Georgia,serif;font-weight:400;font-size:28px;line-height:1.05;margin:0 0 12px;letter-spacing:-.03em}
+.card-gradient p{font-size:13px;line-height:1.75;color:#b8beb4;margin:0 0 20px}
+.card-gradient .meta{font-size:10px;letter-spacing:.1em;color:var(--gold);text-transform:uppercase}
+@media(prefers-contrast:more){.theme-toggle{border-width:2px}}
+@media(prefers-reduced-motion:reduce){.card-gradient{transition:none}}
